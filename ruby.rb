@@ -180,7 +180,7 @@ class Greeter
     @name = new_name
 	end 
 end
-g = Greeter.new("Barney") 
+g = Greeter.new("Barney") #create instance of class named Barney
 g.name # => Barney 
 g.name = "Betty"
 g.name # => Betty
@@ -261,9 +261,7 @@ been defined at the point it reconstitutes session data. For that reason,
 you’ll use the model declaration in your controller to list all models that
 are marshaled. This preemptively loads the necessary classes to make
 marshaling work.
-
 =end
-
 
 class CreateProducts < ActiveRecord::Migration 
 	def change	# method that calls method create_table passing the name :products in
@@ -277,26 +275,69 @@ class CreateProducts < ActiveRecord::Migration
 	end
 end
 
-
-
 #Idioms
 empty!
 empty?
-a||b  #The expression a || b evaluates a. If it isn’t false or nil, then evaluation stops, and the expression returns a. Otherwise, the statement returns b
+a||b  #The expression a || b evaluates a. If it isn’t false or nil, then evaluation
+#stops, and the expression returns a. Otherwise, the statement returns b
+
+#The lambda operator converts a block into an object of type Proc.
+class Order < ActiveRecord::Base
+scope :last_n_days, lambda { |days| where('updated < ?' , days) }
+end
+
+require File.expand_path('../../config/environment', __FILE__)
+#Ruby’s require method loads an external source file into our application.
+#This is used to include library code and classes that our application relies
+#on. In normal use, Ruby finds these files by searching in a list of directo-
+#ries, the LOAD_PATH.
+
+
+#Use Cases
 
 
 
 
+=begin
+The buyer uses Depot to browse the products we have to sell, select some to purchase, and supply the information needed to create an order.
+The seller uses Depot to maintain a list of products to sell, to determine the orders that are awaiting shipping, and to mark orders as shipped.
+=end
+
+http://localhost:3000/
+http://localhost:3000/bot/hello
+http://localhost:3000/bot/goodbye
 
 
+#BUYER
+#The buyer sees a catalog page, 
+	#They select one product at a time. 
+	#Each product selected gets added to the cart. 
+#The cart is displayed after each selection. 
+	#The buyer can continue shopping using the catalog pages 
+	# or check out and buy the contents of the cart. 
+#During checkout, 
+	#we capture contact and payment details. 
+	#Then display a receipt page. 
+#We don’t yet know how we’re going to handle payment, 
+	#so those details are fairly vague in the flow.
 
+#SELLER
+#After logging in 
+	#the seller sees a menu 
+#letting her:
+	# create or view a product 
+	# or ship existing orders. 
+#Once viewing a product, 
+	#the seller may optionally edit the product information 
+	#or delete the product entirely.
 
-
-
-
-
-
-
+#simplistic shipping 
+	#It displays each order that has not yet been shipped, 
+	#one order per page. 
+#The seller may choose to skip to the next 
+	#or may ship the order, 
+	#using the information from the page as appropriate. 
+	#The shipping function is clearly not (real world) and will change
 
 
 
