@@ -1,0 +1,12 @@
+<h1>Bot#goodbye</h1>
+<p>Find me in app/views/bot/goodbye.html.erb</p>
+
+<p>
+	<%= link_to "Goodbye", bot_hello_path %>!
+</p>
+
+
+<%= @files = Dir.glob('*') %>
+<br><br>
+<% for file in @files %> file name is: <%= file %>
+<% end %>
