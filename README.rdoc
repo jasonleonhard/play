@@ -1,6 +1,8 @@
-rake about
+## Overview
 
-About your application's environment
+	rake about
+ 
+**About your application's environment**
 
 Ruby version              2.1.2-p95 (x86_64-darwin13.0)
 
@@ -23,7 +25,10 @@ Action Mailer version     4.1.6
 Active Support version    4.1.6
 
 Application root          /Users/<username>/play
+
 Environment               development
+
 Database adapter          sqlite3
+
 Database schema version   0
 
