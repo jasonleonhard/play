@@ -8,4 +8,6 @@ class BotController < ApplicationController
 
   end
 
+ #def
+ #end
 end

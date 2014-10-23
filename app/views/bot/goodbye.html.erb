@@ -5,8 +5,11 @@
 	<%= link_to "Goodbye", bot_hello_path %>!
 </p>
 
+<!-- shows all files local to our rails app  -->
+<%= @files = Dir.glob('*') %> <br><br> 
 
-<%= @files = Dir.glob('*') %>
-<br><br>
 <% for file in @files %> file name is: <%= file %>
 <% end %>
+
+
+
