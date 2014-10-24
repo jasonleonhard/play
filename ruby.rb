@@ -308,6 +308,9 @@ http://localhost:3000/bot/hello
 http://localhost:3000/bot/goodbye
 
 
+
+#CHECKOUT APP ROUGH IDEA:
+
 #BUYER
 #The buyer sees a catalog page, 
 	#They select one product at a time. 
