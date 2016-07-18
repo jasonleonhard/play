@@ -1,8 +1,6 @@
 <h1>Bot#hello</h1>
 <p>Find me in app/views/bot/hello.html.erb</p>
+<p><%= link_to "Goodbye", bot_goodbye_path %>!</p>
 
-	It is now <%= Time.now %> <br>
-	It is now <%= @time %> <br>
-
-	<%= link_to "Goodbye", bot_goodbye_path %>!
-
+<!-- It is now <%= Time.now %> <br> inline -->
+It is now <%= @time %> <br>
