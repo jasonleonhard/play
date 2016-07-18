@@ -5,9 +5,7 @@ class BotController < ApplicationController
   end
 
   def goodbye
-
+    @files = Dir.glob('*')
   end
 
- #def
- #end
 end

@@ -3,7 +3,7 @@
 <p><%= link_to "Hello", bot_hello_path %>!</p>
 
 <!-- shows all files local to our rails app  -->
-<%= @files = Dir.glob('*') %> <br><br> 
+<%= @files %> <br><br> <!-- inline -->
 
 <% for file in @files %> <%= file  %>
 <% end %>
